@@ -14,26 +14,43 @@ This MVP supports **English + Russian** questions and uses a fixed fallback mess
 
 ## Project Structure
 
-```
+
+```text
 faq_chatbot-beginner/
-â”œâ”€â”€ data/
-â”‚   â”œâ”€â”€ intents.json        # FAQ intents, patterns, responses
-â”‚   â”œâ”€â”€ web_faq.csv         # Web-sourced Q/A dataset (question, answer, topic, source)
-â”‚   â””â”€â”€ topics/             # Popular real-life topic CSV files
-â”œâ”€â”€ models/
-â”‚   â”œâ”€â”€ faq_index_*.joblib  # Saved retrieval artifacts by method
-â”‚   â”œâ”€â”€ classes.pkl         # Intent tags
-â”‚   â””â”€â”€ words.pkl           # TF-IDF vocabulary
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ utils.py            # Text preprocessing and data prep
-â”‚   â”œâ”€â”€ train.py            # Training/index build script
-â”‚   â”œâ”€â”€ chat.py             # Interactive chatbot CLI
-â”‚   â”œâ”€â”€ evaluate.py         # Method comparison metrics
-â”‚   â”œâ”€â”€ visualize.py        # Wordclouds and portfolio charts
-â”‚   â””â”€â”€ smoke_test.py       # Quick portfolio readiness checks
-â”œâ”€â”€ requirements.txt
-â””â”€â”€ README.md
+├── data/
+│   ├── intents.json
+│   ├── web_faq.csv
+│   └── topics/
+│       ├── food.csv
+│       ├── health.csv
+│       ├── news.csv
+│       ├── politics.csv
+│       ├── sports.csv
+│       ├── technology.csv
+│       └── weather.csv
+├── models/
+│   ├── faq_index.joblib
+│   ├── faq_index_bm25.joblib
+│   ├── faq_index_boolean.joblib
+│   ├── faq_index_bow.joblib
+│   └── faq_index_tfidf.joblib
+├── results/
+│   ├── eval_metrics.csv
+│   ├── smoke_eval.csv
+│   └── plots/
+├── src/
+│   ├── chat.py
+│   ├── evaluate.py
+│   ├── smoke_test.py
+│   ├── train.py
+│   ├── utils.py
+│   └── visualize.py
+├── DEMO_SCRIPT.md
+├── GITHUB_DESCRIPTION.md
+├── README.md
+└── requirements.txt
 ```
+
 
 ## 1) Install dependencies
 
@@ -169,25 +186,13 @@ python src/visualize.py --eval-csv results/eval_metrics.csv --out-dir results/pl
 
 ## 6) Visualization preview
 
-### Wordcloud: Questions
-
-![Wordcloud Questions](results/plots/wordcloud_questions.png)
-
-### Wordcloud: Answers
-
-![Wordcloud Answers](results/plots/wordcloud_answers.png)
-
-### Wordcloud: Topics
-
-![Wordcloud Topics](results/plots/wordcloud_topics.png)
-
-### Topic counts (Questions vs Answers)
-
-![Topic Question Answer Counts](results/plots/topic_question_answer_counts.png)
-
-### Method comparison (Accuracy vs Fallback)
-
-![Evaluation Comparison](results/plots/evaluation_comparison.png)
+| Preview | Image |
+|---|---|
+| Wordcloud: Questions | ![Wordcloud Questions](results/plots/wordcloud_questions.png) |
+| Wordcloud: Answers | ![Wordcloud Answers](results/plots/wordcloud_answers.png) |
+| Wordcloud: Topics | ![Wordcloud Topics](results/plots/wordcloud_topics.png) |
+| Topic counts (Questions vs Answers) | ![Topic Question Answer Counts](results/plots/topic_question_answer_counts.png) |
+| Method comparison (Accuracy vs Fallback) | ![Evaluation Comparison](results/plots/evaluation_comparison.png) |
 
 ## 7) Current results snapshot
 
