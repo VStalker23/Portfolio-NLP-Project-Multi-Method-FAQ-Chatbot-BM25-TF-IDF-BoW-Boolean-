@@ -25,3 +25,10 @@ htmlcov/
 # IDE/editor settings
 .vscode/
 .idea/
+
+# Generated ML artifacts
+models/*.joblib
+models/*.pkl
+
+# Generated visualizations
+results/plots/*.png
