@@ -1,0 +1,2 @@
+method,total,correct,accuracy,fallback_rate
+tfidf,122,10,0.081967,0.688525

@@ -1,0 +1,97 @@
+{
+	"intents": [
+		{
+			"tag": "greeting",
+			"patterns": [
+				"hello",
+				"hi",
+				"good morning",
+				"good evening",
+				"привет",
+				"здравствуйте",
+				"добрый день"
+			],
+			"responses": [
+				"Hello! Ask me about this portfolio FAQ chatbot project.",
+				"Hi! I can answer common questions about the project setup and usage.",
+				"Привет! Я могу ответить на вопросы про этот FAQ-чатбот проект."
+			]
+		},
+		{
+			"tag": "project_purpose",
+			"patterns": [
+				"what is this project",
+				"what does this chatbot do",
+				"project goal",
+				"о чем этот проект",
+				"что делает этот чатбот",
+				"цель проекта"
+			],
+			"responses": [
+				"This is a beginner NLP FAQ chatbot that retrieves the best answer using TF-IDF similarity.",
+				"The project demonstrates a simple retrieval-based chatbot pipeline for portfolio use."
+			]
+		},
+		{
+			"tag": "run_training",
+			"patterns": [
+				"how to train model",
+				"how do i build index",
+				"train command",
+				"как обучить модель",
+				"как запустить обучение",
+				"команда обучения"
+			],
+			"responses": [
+				"Run: python src/train.py",
+				"Use the training script to build and save TF-IDF artifacts in the models folder."
+			]
+		},
+		{
+			"tag": "run_chat",
+			"patterns": [
+				"how to run chatbot",
+				"start chat",
+				"chat command",
+				"как запустить чатбот",
+				"команда запуска чата",
+				"как начать диалог"
+			],
+			"responses": [
+				"Run: python src/chat.py",
+				"After training, launch chat mode and type your questions."
+			]
+		},
+		{
+			"tag": "tech_stack",
+			"patterns": [
+				"which libraries are used",
+				"tech stack",
+				"dependencies",
+				"какие библиотеки используются",
+				"стек технологий",
+				"зависимости проекта"
+			],
+			"responses": [
+				"Core stack: scikit-learn, numpy, joblib, and simple custom preprocessing.",
+				"Optional visualization uses wordcloud and matplotlib."
+			]
+		},
+		{
+			"tag": "goodbye",
+			"patterns": [
+				"bye",
+				"goodbye",
+				"see you",
+				"пока",
+				"до свидания",
+				"увидимся"
+			],
+			"responses": [
+				"Goodbye!",
+				"See you later.",
+				"Пока!"
+			]
+		}
+	]
+}

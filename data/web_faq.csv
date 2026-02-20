@@ -1,0 +1,30 @@
+question,answer,topic,source_url
+What is Python?,Python is a high-level interpreted language used for many types of software development.,python_basics,https://docs.python.org/3/faq/general.html
+What is Python good for?,Python is useful for automation web development data work scripting and many general-purpose tasks.,python_basics,https://docs.python.org/3/faq/general.html
+Is Python good for beginners?,Yes Python is widely considered beginner-friendly because of readable syntax and strong documentation.,python_basics,https://docs.python.org/3/faq/general.html
+How do I get Python documentation?,Use the official docs at docs.python.org for tutorials library reference and guides.,python_basics,https://docs.python.org/3/faq/general.html
+How stable is Python?,Python is stable and receives regular feature and bugfix releases.,python_basics,https://docs.python.org/3/faq/general.html
+Why do I get UnboundLocalError?,It usually happens when a variable is assigned inside a function so Python treats it as local before it is read.,python_errors,https://docs.python.org/3/faq/programming.html
+How do I avoid mutable default argument bugs?,Use None as default and create a new list or dict inside the function.,python_errors,https://docs.python.org/3/faq/programming.html
+Why do lambdas in a loop return the same value?,They capture the variable by reference so use a default argument like lambda n=x to bind current value.,python_functions,https://docs.python.org/3/faq/programming.html
+What is the best way to pass through args and kwargs?,Collect with *args and **kwargs and forward them with the same syntax when calling another function.,python_functions,https://docs.python.org/3/faq/programming.html
+What is the difference between parameters and arguments?,Parameters are names in function definitions and arguments are actual values passed at call time.,python_functions,https://docs.python.org/3/faq/programming.html
+How do I copy a Python object?,Use copy.copy for shallow copy and copy.deepcopy for deep copy when needed.,python_data,https://docs.python.org/3/faq/programming.html
+How do I convert string to number in Python?,Use int for integers and float for floating-point conversion and avoid eval for safety.,python_data,https://docs.python.org/3/faq/programming.html
+How do I convert number to string in Python?,Use str or formatting methods such as f-strings or format.,python_data,https://docs.python.org/3/faq/programming.html
+How can I remove duplicates from a list?,A common quick method is list(set(mylist)) if order does not matter.,python_data,https://docs.python.org/3/faq/programming.html
+How can I create a multidimensional list safely?,Use a list comprehension like [[None] * w for _ in range(h)] to avoid shared references.,python_data,https://docs.python.org/3/faq/programming.html
+How do I speed up slow Python code?,Profile first then optimize algorithms and data structures before micro-optimizations.,python_performance,https://docs.python.org/3/faq/programming.html
+What is the efficient way to join many strings?,Collect pieces in a list and call ''.join(parts) at the end.,python_performance,https://docs.python.org/3/faq/programming.html
+How should I set Git user.name?,Set user.name to your real personal name that should appear in commit history.,git_config,https://git-scm.com/docs/gitfaq
+How do I configure Git editor?,Set core.editor or use VISUAL or EDITOR environment variables.,git_config,https://git-scm.com/docs/gitfaq
+How should I store credentials for Git over HTTP?,Use a credential helper such as system keychain integrations instead of putting passwords in URLs.,git_credentials,https://git-scm.com/docs/gitfaq
+How do I change saved Git credentials?,Reject old credentials then authenticate again so Git stores updated ones.,git_credentials,https://git-scm.com/docs/gitfaq
+What is the difference between git fetch and git pull?,Fetch downloads remote updates only while pull performs fetch plus merge or rebase.,git_common,https://git-scm.com/docs/gitfaq
+How can I fix the last Git commit?,Stage your fixes and run git commit --amend optionally with --no-edit.,git_common,https://git-scm.com/docs/gitfaq
+How do I undo a bad commit on main branch?,Use git revert to create a new commit that safely undoes changes.,git_common,https://git-scm.com/docs/gitfaq
+Why are ignored files still tracked in Git?,Files already tracked remain tracked until removed from index for example with git rm --cached.,git_common,https://git-scm.com/docs/gitfaq
+Can I sync a Git working tree with cloud folder?,It is risky and can corrupt repositories so prefer normal push and pull workflows.,git_transfers,https://git-scm.com/docs/gitfaq
+How should I enforce commit policy with hooks?,Enforce policy on server-side hooks or CI because local hooks can be bypassed.,git_workflow,https://git-scm.com/docs/gitfaq
+How should text files be stored in Git?,Prefer UTF-8 text with LF endings in repository and normalize checkout settings by platform.,git_cross_platform,https://git-scm.com/docs/gitfaq
+Why do I see ^M in git diff on Windows?,It indicates CRLF line endings compared with expected LF and can be managed via core.eol and related settings.,git_cross_platform,https://git-scm.com/docs/gitfaq
